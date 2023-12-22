@@ -14,8 +14,8 @@ namespace BulkyBook.DataAccess.Data
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
-
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<Company> Companies { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -26,6 +26,40 @@ namespace BulkyBook.DataAccess.Data
                 new Category { Id = 2, Name = "SciFi", DisplayOrder = 2 },
                 new Category { Id = 3, Name = "History", DisplayOrder = 3 }
                 );
+
+            modelBuilder.Entity<Company>().HasData(
+                new Company
+                {
+                    Id = 1,
+                    Name = "Tech Solution",
+                    StreetAddress = "123 Tech Street",
+                    City = "Tech City",
+                    State = "IL",
+                    PostalCode = "1231",
+                    PhoneNumber = "09123123123"
+                },
+                new Company
+                {
+                    Id = 2,
+                    Name = "Vivid vooks",
+                    StreetAddress = "123 Vivid Street",
+                    City = "Vivid City",
+                    State = "US",
+                    PostalCode = "1231",
+                    PhoneNumber = "09123123123"
+                },
+                new Company
+                {
+                    Id = 3,
+                    Name = "Readers Club",
+                    StreetAddress = "123 Main Street",
+                    City = "Main City",
+                    State = "NY",
+                    PostalCode = "1231",
+                    PhoneNumber = "09123123123"
+                }
+                );
+
 
             modelBuilder.Entity<Product>().HasData(
                 new Product
@@ -40,7 +74,7 @@ namespace BulkyBook.DataAccess.Data
                     Price50 = 85,
                     Price100 = 80,
                     CategoryId = 3,
-                    ImageUrl=""
+                    ImageUrl = ""
                 },
                 new Product
                 {
