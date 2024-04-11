@@ -23,11 +23,11 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-controller="Home" asp-action="Index" asp-route-area="" asp-route-id="">Home</a>
                         </li>
                         
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="Customer" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="Admin" asp-controller="Order" asp-action="Index">Manage Order</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -65,7 +65,7 @@
 
     <footer class="border-top footer bg-primary text-muted">
         <div class="container text-center text-light">
-            BulkyBookWeb - Copyright <i class="bi bi-c-circle"></i> <span id="current-year"></span> By <a href="https://www.linkedin.com/in/james-philip-ignacio-2a081a251/" class="text-light text-decoration-none" target=”_blank”>jmsphlpi</a>
+            BulkyBookWeb - Copyright <i class="bi bi-c-circle"></i> <span id="current-year"></span> By <a href="https://www.linkedin.com/in/james-philip-ignacio-2a081a251/" class="text-light text-decoration-none" target=”_blank”>James Philip Ignacio</a>
         </div>
             
     </footer>
